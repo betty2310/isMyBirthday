@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Is today my birthday?</title>
+    <link rel="stylesheet" href="{% static 'birthday/style.css' %}">
+    <link rel="icon" href="{% static 'birthday/favicon.ico' %}">
+</head>
+
+<body>
+    <h1>Is today my birthday?</h1>
+    <p>Today is {{ date }}</p>
+    {% if is_birth_day %}
+    <h1>yes</h1>
+    {% else %}
+    <h1 id="answer">no</h1>
+    {% endif %}
+</body>
+
+</html>
